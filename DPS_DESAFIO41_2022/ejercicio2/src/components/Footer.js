@@ -3,10 +3,10 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 // onPress={calculate}
 
-const Footer = ({ calcularTotal }) => {
+const Footer = ({ sumarTotal }) => {
     return(
         <View style = { styles.containerFooter }>
-            <TouchableOpacity style = { styles.button } onPress={ calcularTotal }>
+            <TouchableOpacity style = { styles.button } onPress={ sumarTotal }>
                 <Text style = { styles.textButton } >Calcular</Text>
             </TouchableOpacity>
         </View>
@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button:{
-        width: '80%',
-        backgroundColor: 'green',
+        width: '90%',
+        backgroundColor: 'blue',
         padding: 15,
     },
     textButton:{
-        fontSize: 18,
-        color: '#fff',
+        fontSize: 19,
+        color: '#ffff',
         textAlign: 'center',
     },
 })
