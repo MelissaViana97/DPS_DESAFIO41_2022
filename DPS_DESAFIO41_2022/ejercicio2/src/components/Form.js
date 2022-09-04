@@ -4,16 +4,17 @@ import RNPickerSelect from 'react-native-picker-select'
 
 //DATOS PARA LOS ITEMS DE LOS RNPICKERSELECT
 const sizes = [
-    { label: 'Short 8 onz.', value: 1 },
-    { label: 'Tall 12 onz.', value: 1.5 },
+    { label: 'Pequeño 8 onz.', value: 1 },
+    { label: 'Mediano 12 onz.', value: 1.5 },
     { label: 'Grande 16 onz.', value: 2 },
 ]
 
-const tiposCafe = [
-    { label: 'Mocha', value: 2 },
-    { label: 'Te chai', value: 2.5 },
-    { label: 'Americano', value: 1.5 },
-    { label: 'Frapper', value: 3 },
+const tiposJugos = [
+    { label: 'Naranja', value: 2 },
+    { label: 'Mandarina', value: 1.5 },
+    { label: 'Limonada', value: 3 },
+    { label: 'Manzana', value: 2.5 },
+    { label: 'Pera', value: 2.75 },
 ]
 
 const tiposPago = [
@@ -23,7 +24,7 @@ const tiposPago = [
 
 const Form = ({ state, setState }) => {
 
-    //Funcion para agregar al estado global el tamaño de café
+    //Funcion para agregar al estado global el tamaño de jugo
     const setSize = (value, index) => {
 
         if(value !== null)
@@ -44,20 +45,20 @@ const Form = ({ state, setState }) => {
         setState( {...state} );
     }
 
-    //Funcion para agregar al estado global el tipo de café
+    //Funcion para agregar al estado global el tipo de jugo
     const setTipoC = (value, index) => {
         if(value !== null)
         {
             state = {
                 ...state,
-                tipoCafe: { text: tiposCafe[index-1].label, value }
+                tipoJugo: { text: tiposJugo[index-1].label, value }
             }
         }
         else
         {
             state = {
                 ...state,
-                tipoCafe: { text: '', value: 0 }
+                tipoJugo: { text: '', value: 0 }
             }
         }
 
@@ -113,7 +114,7 @@ const Form = ({ state, setState }) => {
                     style = { picketSelectStyles }
                     onValueChange={ (value, index) => setSize(value, index) }
                     placeholder ={{
-                        label: 'Seleccione tamaño de café',
+                        label: 'Seleccione tamaño de jugo',
                         value: null,
                     }}
                     items={ sizes }
@@ -122,10 +123,10 @@ const Form = ({ state, setState }) => {
                     style = { picketSelectStyles }
                     onValueChange={ (value, index) => setTipoC(value, index) }
                     placeholder ={{
-                        label: 'Seleccione tipo de café',
+                        label: 'Seleccione tipo de jugo',
                         value: null,
                     }}
-                    items={ tiposCafe }
+                    items={ tiposJugo }
                 />
 
                 <View style = { styles.containerPago }>
