@@ -6,23 +6,23 @@ import Lista from './components/Lista';
 function App() {
 
   //Declaracion de Estados
-  const [ lista, setLista ] = useState([]); //{ nombre: '', precio: '', cantidad: 1 }
+  const [ lista, setLista ] = useState([]); 
   const [ total, setTotal ] = useState(0);
 
   useEffect(() => {
-    const calcularTotal = () => {
-      const subtotal = lista.map( (list) => {
+    const sumaTotal = () => {
+      const pretotal = lista.map( (list) => {
         return list.cantidad * list.precio
       })
 
       let stotal = 0
-      subtotal.forEach( st => {
+      pretotal.forEach( st => {
         stotal = stotal + st
       } )
   
       setTotal(stotal);
     }
-    calcularTotal();
+    sumaTotal();
   }, [ lista ])
 
   return (
