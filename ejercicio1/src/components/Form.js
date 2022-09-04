@@ -46,7 +46,7 @@ const Form = ({ lista, setLista }) => {
         }
         else
         {
-            alert('Seleccione un producto')   
+            alert('Seleccione producto')   
         }
     }
 
