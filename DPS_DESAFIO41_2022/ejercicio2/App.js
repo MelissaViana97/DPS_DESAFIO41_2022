@@ -14,7 +14,7 @@ export default function App() {
   const [ state, setState ] = useState({
     cantidad: 0,
     size: { text: '', value: 0 },
-    tipoCafe: { text: '', value: 0 },
+    tipoJugo: { text: '', value: 0 },
     tipoPago: '',
     descuento: 0,
     subtotal: 0,
@@ -23,15 +23,15 @@ export default function App() {
   const [ errorMenssage, setError ] = useState('');
 
 
-  const calcularTotal = () => {
+  const sumarTotal = () => {
 
     if(!state.size.value > 0)
     {
-      setError('Seleccione el tamaño de café');
+      setError('Seleccione el tamaño del Jugo ');
     }
-    else if(!state.tipoCafe.value > 0)
+    else if(!state.tipoJugo.value > 0)
     {
-      setError('Seleccione el tipo de café');
+      setError('Seleccione el tipo de jugo');
     }
     else if(!state.descuento > 0)
     {
@@ -39,12 +39,12 @@ export default function App() {
     }
     else if(!state.cantidad > 0)
     {
-      setError('Ingrese la cantidad de cafe a comprar');
+      setError('Ingrese la candad de jugo a comprar');
     }
     else
     {
-      const { cantidad, size, tipoCafe, descuento } = state;
-      let subtotal = cantidad * ( size.value + tipoCafe.value );
+      const { cantidad, size, tipoJugo, descuento } = state;
+      let subtotal = cantidad * ( size.value + tipoJugo.value );
 
       let valor = roundToTwo(subtotal * (1 - descuento));
 
