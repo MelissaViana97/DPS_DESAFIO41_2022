@@ -4,16 +4,16 @@ import './Form.css'
 
 //Listado de Productos que se mostraran en el Select
 const options = [
-    { value: 'Chocolate' , label: 'Chocolate', precio: 0.5 },
-    { value: 'Jabón' , label: 'Jabón', precio: 1 },
-    { value: 'Carne' , label: 'Carne', precio: 2.5 },
-    { value: 'Suavitel' , label: 'Suavitel', precio: 1.75 },
-    { value: 'Arroz' , label: 'Arroz', precio: 0.5 },
-    { value: 'Azúcar' , label: 'Azúcar', precio: 0.75 },
-    { value: 'Pera' , label: 'Pera', precio: 0.20 },
-    { value: 'Soda' , label: 'Soda', precio: 0.75 },
-    { value: 'Galleta' , label: 'Galleta', precio: 0.30 },
-    { value: 'Jugo' , label: 'Jugo', precio: 1.25 }
+    { value: 'Leche' , label: 'Leche', precio: 1.2 },
+    { value: 'Shampoo' , label: 'Shampoo', precio: 3 },
+    { value: 'Pollo' , label: 'Pollo', precio: 2.0 },
+    { value: 'Tomates' , label: 'Tomates', precio: 1.50 },
+    { value: 'Azucar' , label: 'Azucar', precio: 0.6 },
+    { value: 'Frijoles' , label: 'Frijoles', precio: 0.8 },
+    { value: 'Manzana' , label: 'Manzana', precio: 0.25 },
+    { value: 'Jugo' , label: 'Jugo', precio: 1.25 },
+    { value: 'crema' , label: 'crema', precio: 1.95 },
+    { value: 'Pan' , label: 'Pan', precio: 2.25 }
 ]
 
 const Form = ({ lista, setLista }) => {
