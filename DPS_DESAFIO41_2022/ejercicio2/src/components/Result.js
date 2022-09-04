@@ -5,9 +5,9 @@ const Result = ( { state, errorMenssage } ) => {
     return(
         <View style = { styles.containerResult }>
             <Text>RESUMEN</Text>
-            <DataResul text = { `Cantidad solicitada:`} value = { state.cantidad }/>
+            <DataResul text = { `Cantidad pedida:`} value = { state.cantidad }/>
             <DataResul text = { `Tamaño:`} value = { `${state.size.text} $ ${state.size.value.toFixed(2)}`  }/>
-            <DataResul text = { `Tipo Café:`} value = { `${state.tipoCafe.text} $ ${state.tipoCafe.value.toFixed(2)}` }/>
+            <DataResul text = { `Tipo Jugo:`} value = { `${state.tipoJugo.text} $ ${state.tipoJugo.value.toFixed(2)}` }/>
             <DataResul text = { `Tipo de Pago:`} value = { state.tipoPago }/>
             <DataResul text = { `Descuento %:`} value = { `${ state.descuento * 100 } %` }/>
             <DataResul text = { `Subtotal:`} value = { `$ ${ state.subtotal.toFixed(2) }` }/>
