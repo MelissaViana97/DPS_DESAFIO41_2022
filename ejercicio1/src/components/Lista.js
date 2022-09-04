@@ -2,11 +2,11 @@ import React from 'react';
 import CardDetalle from './CardDetalle';
 import './Lista.css'
 
-const Lista = ({ lista, setLista }) => {
+const Checklist = ({ Checklist , setv }) => {
 
     //Funcion para modificar la cantidad del producto
     const ChangeCantidad = ( item ) => {
-        lista = lista.map( (list) => {
+       checklist = checklist .map( (list) => {
             if(list.producto === item.producto)
             {  
                 list.cantidad = item.cantidad
@@ -14,15 +14,15 @@ const Lista = ({ lista, setLista }) => {
             return list
         })
 
-        setLista([...lista]);
+        setChecklist([...checklist]);
     }
 
     //Funcion para eliminar un producto de la lista
     const DeleteItem = ( producto ) => {
 
-        let pos = lista.findIndex( list => list.producto === producto );
-        lista.splice(pos, 1);
-        setLista([...lista]);
+        let pos = checklist.findIndex( list => list.producto === producto );
+        checklist.splice(pos, 1);
+        setChecklist([...checklist]);
     }
 
     return(
@@ -41,4 +41,4 @@ const Lista = ({ lista, setLista }) => {
     )
 }
 
-export default Lista;
+export default Checklist;
